@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Document</title>
+  <link rel="stylesheet" href="css/main.css">
+</head>
+<body>
+  <a  class="menu-link " href="#menu">
+    <span></span>
+  </a>
+  <div class="menu">
+    <ul >
+      <li><a href="#main">Главная</a></li>
+      <li><a href="#news">Новости</a></li>
+      <li><a href="#map">Карта</a></li>
+      <li><a href="#offer">Отзывы</a></li>
+      <li><a href="#about">О нас</a></li>
+    </ul>
+  </div>
+
+  <section id="main">
+    <h2>Главная</h2>
+    <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. At consequatur ratione similique ipsa rem ab dicta quaerat voluptate rerum asperiores temporibus illum qui explicabo molestias, quas harum. </p>
+  </section>
+  <section id="news">
+    <h2>Новости</h2>
+    <p>Rerum facere, illum omnis deserunt veritatis aliquam libero provident maxime consequuntur laboriosam quaerat nam laborum, tempore, harum perferendis inventore aperiam magnam odit totam similique quos nihil esse ipsam. Assumenda consequuntur modi omnis. </p>
+  </section>
+  <section id="map">
+    <h2>Карты</h2>
+    <p>Accusantium, reprehenderit assumenda earum expedita recusandae nulla itaque sequi. Necessitatibus accusamus, dicta at explicabo recusandae quos soluta perspiciatis asperiores enim sed, ex consequuntur alias. </p>
+  </section>
+  <section id="offer">
+    <h2>Отзывы</h2>
+    <p>Ullam, blanditiis sint voluptates excepturi. Quasi voluptates nihil tenetur placeat suscipit, voluptas, illum et cumque laboriosam cupiditate repudiandae ab labore eum praesentium repellendus.  </p>
+  </section>
+  <section id="about">
+    <h2>О нас</h2>
+    <p>Mollitia aut dolore consectetur, fuga, molestias delectus sint optio. Distinctio harum vero quod labore laboriosam maxime, iusto nisi fugit voluptatum suscipit velit inventore omnis quasi consectetur iste vel et ipsa. Quas in at, aliquam aperiam unde et ipsa veniam commodi ducimus, ullam inventore repellendus hic soluta omnis eius accusamus repellat, ratione harum cum deleniti quos libero delectus, eos quisquam? Similique consectetur voluptate modi repellendus, nemo culpa necessitatibus eum quis provident placeat. Ea dolorum culpa sunt error, voluptatibus, consequatur quam suscipit repellendus, ullam ipsa impedit labore magnam natus cum quasi, non explicabo! Laborum ipsum beatae reprehenderit quod libero veritatis, sunt iure nisi eos quo, non neque, odit quae! Laudantium, consectetur, delectus? </p>
+  </section>
+  <script
+  src="https://code.jquery.com/jquery-1.12.4.min.js"
+  integrity="sha256-ZosEbRLbNQzLpnKIkEdrPv7lOy9C27hHQ+Xp8a4MxAQ="
+  crossorigin="anonymous">
+  </script>
+  <script>
+    $(document).ready(function(){
+        var link = $('.menu-link');
+        var link_active = $('.menu-link_active');
+        var menu = $('.menu');
+        var nav_link = $('.menu a');
+
+        link.click(function(){
+          link.toggleClass('menu-link_active');
+          menu.toggleClass('menu_active');
+        });
+        nav_link.click(function(){
+          link.toggleClass('menu-link_active');
+          menu.toggleClass('menu_active');
+        });
+    });
+  </script>
+</body>
+</html>

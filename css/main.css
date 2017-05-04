@@ -1,0 +1,160 @@
+.box {
+  width: 200px;
+  height: 200px;
+  background-color: red;
+  -webkit-animation-name: anim-color;
+  -moz-animation-name: anim-color;
+  -o-animation-name: anim-color;
+  animation-name: anim-color;
+  -webkit-animation-duration: 2s;
+  -moz-animation-duration: 2s;
+  -o-animation-duration: 2s;
+  animation-duration: 2s;
+  -webkit-animation-timing-function: cubic-bezier(.42,0,.21,1.02);
+  -moz-animation-timing-function: cubic-bezier(.42,0,.21,1.02);
+  -o-animation-timing-function: cubic-bezier(.42,0,.21,1.02);
+  animation-timing-function: cubic-bezier(.42,0,.21,1.02);
+  -webkit-animation-delay: 3s;
+  -moz-animation-delay: 3s;
+  -o-animation-delay: 3s;
+  animation-delay: 3s;
+  -webkit-animation-iteration-count: infinite;
+  -moz-animation-iteration-count: infinite;
+  -o-animation-iteration-count: infinite;
+  animation-iteration-count: infinite;
+  -webkit-animation-direction: reverse;
+  -moz-animation-direction: reverse;
+  -o-animation-direction: reverse;
+  animation-direction: reverse;
+  -webkit-animation: anim-color 2s easy 1s infinity reverse;
+  -moz-animation: anim-color 2s easy 1s infinity reverse;
+  -o-animation: anim-color 2s easy 1s infinity reverse;
+  animation: anim-color 2s easy 1s infinity reverse;
+  -webkit-animation-fill-mode: forwards;
+  -moz-animation-fill-mode: forwards;
+  -o-animation-fill-mode: forwards;
+  animation-fill-mode: forwards;
+}
+
+@keyframes anim-color {
+  0% {
+    background-color: gray;
+    margin-left: 0;
+  }
+
+  to {
+    background-color: purple;
+    margin-left: 400px;
+  }
+}
+* {
+  margin: 0;
+}
+
+section {
+  padding: 30px 100px;
+  height: 100vh;
+  display: block;
+}
+
+section p {
+  margin-top: 10px;
+  color: #00f;
+  font-weight: 700;
+}
+
+.menu {
+  background-color: gray;
+  position: fixed;
+  width: 200px;
+  height: 100vh;
+  z-index: 1;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  left: -100vw;
+  transition: all .5s;
+}
+
+.menu-link {
+  z-index: 9;
+  display: block;
+  width: 50px;
+  height: 50px;
+  background-color: #fff;
+  border-radius: 50%;
+  box-shadow: 1px 1px 10px rgba(0,0,0,.4);
+  position: fixed;
+  top: 20px;
+  left: 20px;
+}
+
+.menu-link span,
+.menu-link span:after,
+.menu-link span:before {
+  display: block;
+  height: 2px;
+  width: 18px;
+  position: absolute;
+  left: 50%;
+  margin-left: -9px;
+  top: 50%;
+  margin-top: -1px;
+  background-color: #333;
+}
+
+.menu-link span:after,
+.menu-link span:before {
+  transition: all .2s;
+  content: '';
+  margin-top: -6px;
+}
+
+.menu-link span:after {
+  margin-top: 4px;
+}
+
+.menu-link_active span {
+  background-color: transparent;
+}
+
+.menu-link_active span:before {
+  transform: rotate(135deg);
+  margin-top: 0;
+}
+
+.menu-link_active span:after {
+  transform: rotate(-135deg);
+  margin-top: 0;
+}
+
+.menu_active {
+  left: 0;
+}
+
+.menu ul {
+  list-style: none;
+  padding: 0;
+  text-align: center;
+}
+
+.menu ul li {
+  width: 100vw;
+}
+
+.menu ul a {
+  display: block;
+  width: 100%;
+  color: #fff;
+  font-family: verdana;
+  font-weight: 100;
+  letter-spacing: 4px;
+  line-height: 4;
+  transition: all .2s;
+  text-decoration: none;
+}
+
+.menu ul a:hover {
+  background-color: rgba(255,255,255,.4);
+  text-decoration: none;
+}
